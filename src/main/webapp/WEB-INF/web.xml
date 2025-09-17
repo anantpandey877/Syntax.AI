@@ -1,0 +1,25 @@
+<web-app>
+  
+  <display-name>Syntax.ai</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <context-param>
+      <param-name>db.driver</param-name>
+      <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+      <param-name>db.url</param-name>
+      <param-value>jdbc:mysql://localhost:3306/syntax_ai_db</param-value>
+  </context-param>
+  <context-param>
+      <param-name>db.user</param-name>
+      <param-value>root</param-value>
+  </context-param>
+  <context-param>
+      <param-name>db.password</param-name>
+      <param-value>root</param-value> </context-param>
+  
+</web-app>

@@ -1,0 +1,16 @@
+# Compiled class files
+build/
+target/
+*.class
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Server metadata
+.metadata
+tmp*/
+
+# Log files
+*.log

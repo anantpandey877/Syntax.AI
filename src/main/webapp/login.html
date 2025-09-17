@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Syntax.AI</title>
+           <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="style.css">     <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo">Syntax.ai</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="code_analysis.html">Analyze Code</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html" class="active">Login</a></li> <li><a href="register.html">Register</a></li>
+                    <li><a href="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <h2>User Login</h2>
+            <p id="errorMessage" style="color: red;"></p>
+
+            <form action="login" method="post">
+                <label for="username">Username/Email:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Syntax.ai. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            const message = urlParams.get('message'); 
+            const errorMessageElement = document.getElementById('errorMessage');
+
+            if (error === 'invalid_credentials') {
+                errorMessageElement.textContent = 'Invalid username/email or password.';
+                errorMessageElement.style.display = 'block';
+            } else if (error === 'auto_login_failed') {
+                 errorMessageElement.textContent = 'Registration successful, but auto-login failed. Please try logging in.';
+                 errorMessageElement.style.display = 'block';
+            } else if (message === 'logged_out') {
+                errorMessageElement.textContent = 'You have been successfully logged out.';
+                errorMessageElement.style.color = 'green'; 
+                errorMessageElement.style.display = 'block';
+            } else {
+                errorMessageElement.style.display = 'none'; 
+            }
+        });
+    </script>
+</body>
+</html>

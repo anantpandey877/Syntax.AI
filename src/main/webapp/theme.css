@@ -1,0 +1,202 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
+    line-height: 1.6;
+}
+
+
+.main-header {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    padding: 15px 0;
+    border-bottom: 2px solid #ff0000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: #e0e0e0; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #ff0000; 
+    border-bottom: 2px solid #ff0000;
+}
+
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1500x800/222222/FFFFFF?text=Coding+Background') no-repeat center center/cover; /* Placeholder background image */
+    text-align: center;
+    padding: 80px 20px;
+    color: #ffffff;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #ff0000; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    color: #cccccc;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff0000; 
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #cc0000; 
+    transform: translateY(-2px);
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.feature-item {
+    background-color: #0d0d0d; 
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 15px;
+    width: calc(25% - 30px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    border-color: #ff0000; 
+}
+
+.feature-item h3 {
+    color: #ff0000; 
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: #b0b0b0;
+    font-size: 0.95em;
+}
+
+
+.icon-bug::before, .icon-explain::before, .icon-performance::before, .icon-comments::before {
+    content: '⚙️'; 
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+.icon-bug::before { content: '🐛'; }
+.icon-explain::before { content: '💡'; }
+.icon-performance::before { content: '⚡'; }
+.icon-comments::before { content: '💬'; }
+
+
+
+.main-footer {
+    background-color: #0d0d0d;
+    color: #b0b0b0;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 2px solid #ff0000; 
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+    .hero-text h2 {
+        font-size: 2.5em;
+    }
+    .hero-text p {
+        font-size: 1.1em;
+    }
+    .feature-item {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 2em;
+    }
+    .feature-item {
+        width: calc(100% - 30px);
+    }
+}
